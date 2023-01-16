@@ -72,7 +72,7 @@ i{
 .top-header ul li{
     margin-left: 50px;
     text-decoration: none;
-    border-top: 2px transparent;
+    border-top: 2px solid white;
 
 }
 
@@ -245,8 +245,8 @@ i{
 .best-locations-card .card-header img{ 
     width: 100%;
     height: 100%;
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
+    border-bottom-left-radius: 18px;
+    border-top-left-radius: 18px;
   }
   .best-locations .card-body{
     display: flex;
@@ -293,6 +293,7 @@ i{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 10px;
   }
 
   .section-title{
