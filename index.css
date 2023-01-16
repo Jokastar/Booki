@@ -72,6 +72,8 @@ i{
 .top-header ul li{
     margin-left: 50px;
     text-decoration: none;
+    border-top: 2px transparent;
+
 }
 
 .top-header ul li:hover{
