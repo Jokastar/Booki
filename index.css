@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
-    border: 0;
-    margin: 0;
     font-family: 'Raleway', sans-serif;
     font-size:medium;
     max-width: 1400px;
 }
-body{
-    padding: 2% 4% 0% 4%;
+html{
     cursor: default;
+    padding: 0% 2%;
 }
 
 a{
@@ -50,11 +48,13 @@ i{
     font-weight: smaller;
 }
 
+
+ /*HEADER*/
+
 .top-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 4%;
 }
 
 .top-header img{
@@ -67,12 +67,13 @@ i{
     display: flex;
     list-style: none;
     justify-content: space-around;
+    padding: 0%;
 }
 
 .top-header ul li{
-    margin-left: 50px;
     text-decoration: none;
     border-top: 2px solid white;
+    margin-left: 30px ;
 
 }
 
@@ -81,49 +82,70 @@ i{
     cursor: pointer;
 }
 
+ /*SECTION SEARCH AND FILTERS*/
+.search-bar i, .search-bar input, .search-bar button{
+  border: none;
+}
+
 .search-bar{
     display: flex;
     align-items: center;
-    margin: 15px 0px;
+    margin: 30px 0px;
+
 }
 
 .search-bar i{
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    padding: 10px;
-
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 15px;
 }
 .search-bar input{
-    padding: 11px 10px 9px 10px;
-    border-left: none; 
+  padding: 4px; 
+  border-left: none;
+}
+
+.search-bar input:active{
+  border:none; 
 }
 .search-bar button{
-    padding: 11px 10px 9px 10px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    padding:15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     position: relative;
     right: 5px;
     border-left: none;
+}
+.search-bar button p{
+  margin: 0px;
+}
+.search-bar button i {
+  padding: 0px;
+  display: none; 
 }
 
 .search-bar button:hover{
     cursor: pointer;
 }
 
-
-.filter{
+.filter-section{
     display: flex;
     align-items: center;
-    margin: 4% 0%;
+}
+.filter-section h3{
+  margin-right: 2%;
+}
+.filters{
+  display: flex;
+  align-items: center;
 }
 .tags{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 0% 1.5%;
+    margin-right: 4%;
     border: 1px solid black;
     border-radius: 40px;
-    padding: 8px 15px
+    padding:10px;
 }
 .tags-icon{
     margin-right: 10px;
@@ -131,6 +153,8 @@ i{
 
 .tags p{
     font-weight: 600;
+    margin: 0px;
+    font-size: small;
 }
 
 .tags:hover{
@@ -139,7 +163,7 @@ i{
 }
 
 .info{
-    margin: 0px 0px 20px 0;
+    margin: 25px 0px; 
 }
 
 .info i{
@@ -151,121 +175,111 @@ i{
     display: inline;  
 }
 
+
+ /*SECTION LOCATIONS GRID*/
+
 .locations-grid{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 2%;
-    justify-content: center;
-}
-
-.all-locations,
-.best-locations{
-    border-radius: 20px;
-    border: none;
-
-}
-
-#all-locations-grid-header{
-    padding: 4% 0% 0% 4%;
-}
-#show-more{
-    padding: 4% 4%;
-}
-
-
-.card,
-.best-locations-card,
-.activity
-{
-    border:none;
-    border-radius: 20px;
-    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
-}
-
-.all-locations-grid{
+    gap: 15px;
+  }
+  
+  .locations-grid p{
+    margin: 1px;
+  }
+  .all-locations, .best-locations, .all-locations-card, .best-locations-card{
+    border-radius: 15px;
+  }
+  
+  .all-locations, .best-locations{
+    padding: 2% 4%;
+  }
+  
+  .all-locations-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    padding: 4%;
     gap: 15px;
-}
-
-.card{
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .all-locations-card{
     padding: 2%;
     background-color: white;
-}
-
-
-.card .card-header img{ 
-  width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-
-}
-
-.card-body{
-    margin-left: 10px;
-}
-#tarif{
-    margin: 1% 0%;
-}
-
-
-
-.best-locations-grid{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    padding: 8%;
-    row-gap: 6%;
-}
-
-.best-locations-grid-header{
+  }
+  
+  .all-locations-card .card-img{
+    width: 100%;
+  }
+  .all-locations-card img{
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .best-locations-header{
     display: flex;
     justify-content: space-between;
-    padding: 8% 8% 0% 8%;
-}
-
-
-.best-locations-card{
+    margin-top: 18.72px;
+  }
+  .best-locations-header h3{
+    margin-top: 0px;
+  }
+  
+  .best-locations-grid{
+    height: 80%;
+    display: flex;
+    flex-direction:column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  
+  .best-locations-card{
+    height:120px;
     display: flex;
     padding: 1%;
+    gap: 15px;
     background-color: white;
-}
-
-.best-locations-card .card-header{
-    width: 35%;
-}
-
-.best-locations-card .card-header img{ 
-    width: 100%;
-    height: 100%;
-    border-bottom-left-radius: 18px;
-    border-top-left-radius: 18px;
   }
-  .best-locations .card-body{
+  .best-locations-card .card-img{
+    width: 100px;
+  }
+  
+  .best-locations-card img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px;
+  }
+  .best-locations-car-body{
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-
-  #best-locations-ratings{
-    margin-top: 0%;
+  
+  .tarif{
+    font-size: small;
+    margin: 2px 1px;
+  }
+  .hotel-name{
+    font-size: 14px;
+    font-weight: bold;
   }
 
-  .all-activities h3{
-    margin-top: 2%;
-  }
+
+ /* SECTION ACTIVITES*/
 
   .activities{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
-    gap: 4%;
+    gap: 35px;
     margin: 2% 0%; 
   }
 
@@ -283,6 +297,8 @@ i{
     font-weight: bold;
   }
 
+   /*FOOTER*/
+
   footer{
     display: flex;
     justify-content: space-around;
@@ -292,8 +308,8 @@ i{
   .footer-section{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 5px;
   }
 
   .section-title{
@@ -304,3 +320,94 @@ i{
     font-size:smaller;
   }
 
+   /* MEDIA QUERIES*/
+  
+  @media screen and (max-width:768px){
+    .locations-grid{
+        grid-template-columns: 1fr;
+      }
+        .best-locations-grid{
+          display: flex;
+          flex-direction: row;
+        }
+        .best-locations-card{
+          padding: 0.5%;
+        }
+        .all-locations-card{
+          padding: 1.5%;
+        }
+  }
+
+  @media screen and (max-width:678px){
+    .top-header{
+        flex-direction: column;
+    }
+    .top-header img{
+        margin: 10px 0px
+    }
+    .top-header ul{
+        width: 100%;
+    }
+    .top-header ul li{
+        margin: 0px;
+    }
+    .search-bar i, .search-bar button{
+      padding: 15px;
+    }
+    .search-bar button p {
+      display: none;
+    }
+    .search-bar button i{
+      display: initial;
+    }
+   
+    .filter-section{
+        flex-direction: column;
+        align-items: initial;
+      }
+      .search-bar{
+        justify-content: center;
+      }
+      .filters{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+      }
+      .tags{
+        justify-content: center;
+      }
+      .locations-grid{
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+    .all-locations-grid, .best-locations-grid{
+      display: flex;
+      flex-direction: column;
+      align-items: initial;
+    }
+      .all-locations-card{
+      padding: 1%;
+    }
+    .all-locations-card img{
+      aspect-ratio: 16/6;
+    }
+    .best-locations-card{
+      padding: 1%;
+    }
+    .activities{
+        display: flex;
+        flex-direction: column;
+    }
+    .activities img{
+        aspect-ratio: 16/9;
+    }
+
+    footer{
+        flex-direction: column;
+
+    }
+  }

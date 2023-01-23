@@ -10,247 +10,236 @@
 </head>
 <body>
     <header>
-        <div class="top-header">
-            <img src="./images/logo/Booki.png" alt="booki-logo" title="booki-logo">
+        <nav class="top-header">
+           <a href="#"><img src="./images/logo/Booki.png" alt="booki-logo" title="booki-logo"></a>
             <ul>
               <a href="#hebergements"><li>Hébergements</li></a>
               <a href="#activites"><li>Activités</li></a>
             </ul>
-        </div>
+        </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Trouvez votre hébergement pour des vacances de reve</h2>
-            <p>En plein centre ville ou en pleine nature</p>
-            <div class="search-bar">
-                <i class="fa-solid fa-location-dot bg-grey color-black"></i>
-                <form action="#" method="get">
+            <section class="search-and-filter">
+                <h2>Trouvez votre hébergement pour des vacances de reve</h2>
+                <p>En plein centre ville ou en pleine nature</p>
+                <div class="search-bar">
+                  <i class="fa-solid fa-location-dot bg-grey color-black"></i>
+                  <form action="#" method="get">
                     <input type="text" placeholder="Marseille,France" class="color-black bold">
-                    <button type="submit" class="bg-blue color-white bold">Rechercher</button>
-                </form>
-            </div>
-            <div class="filter">
-                <h3 id="filter-title">Filtres</h3>
-                <div class="tags">
-                    <i class="fa-sharp fa-solid fa-money-bill-wave tags-icon"></i>
-                    <p>Economique</p>
+                    <button type="submit" class="bg-blue color-white bold">
+                      <p>Rechercher</p>
+                      <i class="fa-solid fa-magnifying-glass color-white"></i>
+                    </button>
+                  </form>
                 </div>
-                <div class="tags">
-                    <i class="fa-solid fa-person tags-icon"></i></i>
-                    <p>Famille</p>
-                </div>
-                <div class="tags">
-                    <i class="fa-solid fa-heart tags-icon"></i>
-                    <p>Romantique</p>
-                </div>
-                <div class="tags">
-                    <i class="fa-solid fa-dog tags-icon"></i>
-                    <p>Animaux</p>
-                </div>
-            </div>
-            <div class="info">
-                <i class="fa-solid fa-info fa-2xs tags-icon"></i>
-                <p>Plus de 500 Logements disponibles dans cette ville</p>
-            </div>    
-        </section>
-
-
-        <section class="locations-grid">
-            <div class="all-locations bg-grey">
-                <h3 id="all-locations-grid-header">Hébergements à Marseille</h3>
-                <div class="all-locations-grid" id="hebergements">
-                    <a href="#">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="photo">     
-                            </div>
-                            <div class="card-body">
-                                <p>Nom Hotel</p>
-                                <p id="tarif">Tarifs</p>
-                                <div class="ratings">
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="photo">     
-                            </div>
-                            <div class="card-body">
-                                <p>Nom Hotel</p>
-                                <p id="tarif">Tarifs</p>
-                                <div class="ratings">
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="photo">     
-                            </div>
-                            <div class="card-body">
-                                <p>Nom Hotel</p>
-                                <p id="tarif">Tarifs</p>
-                                <div class="ratings">
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="photo">     
-                            </div>
-                            <div class="card-body">
-                                <p>Nom Hotel</p>
-                                <p id="tarif">Tarifs</p>
-                                <div class="ratings">
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="photo">     
-                            </div>
-                            <div class="card-body">
-                                <p>Nom Hotel</p>
-                                <p id="tarif">Tarifs</p>
-                                <div class="ratings">
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="photo">     
-                            </div>
-                            <div class="card-body">
-                                <p>Nom Hotel</p>
-                                <p id="tarif">Tarifs</p>
-                                <div class="ratings">
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <h3 id="show-more">Afficher plus</h3>
-            </div>
-            <div class="best-locations bg-grey">
-                <div class="best-locations-grid-header">
-                    <h3 class="grid-title">Les plus populaires</h3>
-                    <a href="#"><i class="fa-solid fa-chart-line"></i></a>
-                </div>
-    
-                <div class="best-locations-grid">
-                        <a href="#">
-                            <div class="best-locations-card">
-                                <div class="card-header">
-                                    <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="photo">     
-                                </div>
-                                <div class="card-body">
-                                    <div>
-                                        <p>Nom Hotel</p>
-                                        <p id="tarif">Tarifs</p>
-                                    </div>
-                                    <div class="ratings" id="best-locations-ratings">
-                                        <i class="fa-solid fa-star fa-xs"></i>
-                                        <i class="fa-solid fa-star fa-xs"></i>
-                                        <i class="fa-solid fa-star fa-xs"></i>
-                                        <i class="fa-solid fa-star fa-xs"></i>
-                                        <i class="fa-solid fa-star fa-xs"></i>
-                                    </div>
-                                </div>
-                            </div>
-                       </a>
-
-                       <a href="#">
-                        <div class="best-locations-card">
-                            <div class="card-header">
-                                <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="photo">     
-                            </div>
-                            <div class="card-body">
-                                <div>
-                                    <p>Nom Hotel</p>
-                                    <p id="tarif">Tarifs</p>
-                                </div>
-                                <div class="ratings" id="best-locations-ratings">
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                    <i class="fa-solid fa-star fa-xs"></i>
-                                </div>
-                            </div>
-                        </div>
-                   </a>
-
-                   <a href="#">
-                    <div class="best-locations-card">
-                        <div class="card-header">
-                            <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="photo">     
-                        </div>
-                        <div class="card-body">
-                            <div>
-                                <p>Nom Hotel</p>
-                                <p id="tarif">Tarifs</p>
-                            </div>
-                            <div class="ratings" id="best-locations-ratings">
-                                <i class="fa-solid fa-star fa-xs"></i>
-                                <i class="fa-solid fa-star fa-xs"></i>
-                                <i class="fa-solid fa-star fa-xs"></i>
-                                <i class="fa-solid fa-star fa-xs"></i>
-                                <i class="fa-solid fa-star fa-xs"></i>
-                            </div>
-                        </div>
+                <div class="filter-section">
+                  <h3 id="filter-title">Filtres</h3>
+                  <div class="filters">
+                    <div class="tags">
+                      <i class="fa-sharp fa-solid fa-money-bill-wave tags-icon"></i>
+                      <p>Economique</p>
                     </div>
-               </a>
+                    <div class="tags">
+                      <i class="fa-solid fa-person tags-icon"></i></i>
+                      <p>Famille</p>
+                    </div>
+                    <div class="tags">
+                      <i class="fa-solid fa-heart tags-icon"></i>
+                      <p>Romantique</p>
+                    </div>
+                    <div class="tags">
+                      <i class="fa-solid fa-dog tags-icon"></i>
+                      <p>Animaux</p>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </section>
+                <div class="info">
+                  <i class="fa-solid fa-info fa-2xs tags-icon"></i>
+                  <p>Plus de 500 Logements disponibles dans cette ville</p>
+                </div>
+              </section>    
+
+              <section class="locations-grid">
+                <div class="all-locations bg-grey">
+                  <h3 id="hebergements">Hébergements à Marseille</h3>
+                  <div class="all-locations-grid">
+                    <div class="all-locations-card">
+                      <div class="card-img">
+                        <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="card-photo" alt="card-photo">
+                      </div>
+                      <div class="card-text">
+                        <p class="hotel-name" me">Hotel Le Soleil du Matin</p>
+                        <p class="tarif">Nuits à partir de 128£</p>
+                      </div>
+                      <div class="ratings">
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-regular fa-star fa-2xs"></i>
+                      </div>
+                    </div>
+            
+                    <div class="all-locations-card">
+                      <div class="card-img">
+                        <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="card-photo" alt="card-photo">
+                      </div>
+                      <div class="card-text">
+                        <p class="hotel-name" me">Hotel Le Soleil du Matin</p>
+                        <p class="tarif">Nuits à partir de 128£</p>
+                      </div>
+                      <div class="ratings">
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-regular fa-star fa-2xs"></i>
+                      </div>
+                    </div>
+            
+                    <div class="all-locations-card">
+                      <div class="card-img">
+                        <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="card-photo" alt="card-photo">
+                      </div>
+                      <div class="card-text">
+                        <p class="hotel-name" me">Hotel Le Soleil du Matin</p>
+                        <p class="tarif">Nuits à partir de 128£</p>
+                      </div>
+                      <div class="ratings">
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-regular fa-star fa-2xs"></i>
+                      </div>
+                    </div>
+            
+                    <div class="all-locations-card">
+                      <div class="card-img">
+                        <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="card-photo" alt="card-photo">
+                      </div>
+                      <div class="card-text">
+                        <p class="hotel-name" me">Hotel Le Soleil du Matin</p>
+                        <p class="tarif">Nuits à partir de 128£</p>
+                      </div>
+                      <div class="ratings">
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-regular fa-star fa-2xs"></i>
+                      </div>
+                    </div>
+            
+                    <div class="all-locations-card">
+                      <div class="card-img">
+                        <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="card-photo" alt="card-photo">
+                      </div>
+                      <div class="card-text">
+                        <p class="hotel-name" me">Hotel Le Soleil du Matin</p>
+                        <p class="tarif">Nuits à partir de 128£</p>
+                      </div>
+                      <div class="ratings">
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-regular fa-star fa-2xs"></i>
+                      </div>
+                    </div>
+            
+                    <div class="all-locations-card">
+                      <div class="card-img">
+                        <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="card-photo" alt="card-photo">
+                      </div>
+                      <div class="card-text">
+                        <p class="hotel-name" me">Hotel Le Soleil du Matin</p>
+                        <p class="tarif">Nuits à partir de 128£</p>
+                      </div>
+                      <div class="ratings">
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-regular fa-star fa-2xs"></i>
+                      </div>
+                    </div>
+            
+            
+                  </div>
+                  <h3>Afficher plus</h3>
+                </div>
+                <div class="best-locations bg-grey">
+                  <div class="best-locations-header">
+                    <h3>Les plus populaires</h3>
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+            
+                  <div class="best-locations-grid">
+                    <div class="best-locations-card">
+                      <div class="card-img">
+                        <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="card-photo">
+                      </div>
+                      <div class="best-locations-car-body">
+                        <div class="card-text">
+                          <p class="hotel-name">Hotel le soleil du matin</p>
+                          <p class="tarif">Nuits à partir de 128£</p>
+                        </div>
+                        <div class="ratings">
+                          <i class="fa-solid fa-star fa-2xs"></i>
+                          <i class="fa-solid fa-star fa-2xs"></i>
+                          <i class="fa-solid fa-star fa-2xs"></i>
+                          <i class="fa-solid fa-star fa-2xs"></i>
+                          <i class="fa-regular fa-star fa-2xs"></i>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="best-locations-card">
+                      <div class="card-img">
+                        <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="card-photo">
+                      </div>
+                      <div class="best-locations-car-body">
+                        <div class="card-text">
+                          <p class="hotel-name">Hotel le soleil du matin</p>
+                          <p class="tarif">Nuits à partir de 128£</p>
+                        </div>
+                        <div class="ratings">
+                          <i class="fa-solid fa-star fa-2xs"></i>
+                          <i class="fa-solid fa-star fa-2xs"></i>
+                          <i class="fa-solid fa-star fa-2xs"></i>
+                          <i class="fa-solid fa-star fa-2xs"></i>
+                          <i class="fa-regular fa-star fa-2xs"></i>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="best-locations-card">
+                      <div class="card-img">
+                        <img src="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="card-photo">
+                      </div>
+                      <div class="best-locations-car-body">
+                        <div class="card-text">
+                          <p class="hotel-name">Hotel le soleil du matin</p>
+                          <p class="tarif">Nuits à partir de 128£</p>
+                        </div>
+                        <div class="ratings">
+                          <i class="fa-solid fa-star fa-2xs"></i>
+                          <i class="fa-solid fa-star fa-2xs"></i>
+                          <i class="fa-solid fa-star fa-2xs"></i>
+                          <i class="fa-solid fa-star fa-2xs"></i>
+                          <i class="fa-regular fa-star fa-2xs"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+        
 
 
-        <div class="all-activities">
+        <section class="all-activities">
             <h3 id="activites">Activités à Marseille</h3>
             <div class="activities">
                     <div class="activity">
@@ -281,7 +270,7 @@
                         </a>
                     </div>
             </div>
-        </div>
+        </section>
     </main>
 
 
