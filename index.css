@@ -9,6 +9,10 @@ html{
     padding: 0% 2%;
 }
 
+body{
+  margin-top: 0px;
+}
+
 a{
     text-decoration: none;
     color: black;
@@ -22,6 +26,9 @@ i{
 .bg-grey{
     background-color: #d9d9d9;
 }
+.bg-lightgrey{
+  background-color: #f2f2f2;
+}
 
 .bg-blue{
     background-color: #0065fc;
@@ -30,6 +37,9 @@ i{
     background-color: #deebff;
 }
 
+.color-grey{
+  color: #d9d9d9;
+}
 .color-blue{
     color: #0065fc;
 
@@ -53,7 +63,7 @@ i{
 
 .top-header{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -68,20 +78,25 @@ i{
     list-style: none;
     justify-content: space-around;
     padding: 0%;
+    margin: 0%;
 }
 
 .top-header ul li{
     text-decoration: none;
     border-top: 2px solid white;
-    margin-left: 30px ;
+    margin-left: 50px ;
 
+}
+
+.top-header img, .top-header ul li{
+  padding-top: 20px;
 }
 
 .top-header ul li:hover{
-    border-top: 2px solid #0065fc;
-    cursor: pointer;
+  cursor: pointer;
+  color: #0065fc;
+  border-top: 2px solid #0065fc;
 }
-
  /*SECTION SEARCH AND FILTERS*/
 .search-bar i, .search-bar input, .search-bar button{
   border: none;
@@ -102,6 +117,8 @@ i{
 .search-bar input{
   padding: 4px; 
   border-left: none;
+  height: 40px;
+  width: 250px;
 }
 
 .search-bar input:active{
@@ -137,15 +154,17 @@ i{
 .filters{
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 .tags{
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-right: 4%;
-    border: 1px solid black;
+    border: 2px solid #d9d9d9;
     border-radius: 40px;
-    padding:10px;
+    padding:12px;
 }
 .tags-icon{
     margin-right: 10px;
@@ -185,14 +204,18 @@ i{
   }
   
   .locations-grid p{
-    margin: 1px;
+    margin: 2px;
   }
-  .all-locations, .best-locations, .all-locations-card, .best-locations-card{
+  .all-locations, .best-locations, .all-locations-card, .best-locations-card, .activity{
     border-radius: 15px;
+  }
+
+  .all-locations-card, .best-locations-card, .activity{
+    box-shadow: 6px 6px 25px rgba(100, 100, 100, 0.2); 
   }
   
   .all-locations, .best-locations{
-    padding: 2% 4%;
+    padding: 10px 25px;
   }
   
   .all-locations-grid{
@@ -219,14 +242,16 @@ i{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
+
+  .all-locations-card .card-text, .all-locations-card .ratings{
+    padding: 1% 4%;
+  }
+
   
   .best-locations-header{
     display: flex;
     justify-content: space-between;
-    margin-top: 18.72px;
-  }
-  .best-locations-header h3{
-    margin-top: 0px;
+    align-items: center;
   }
   
   .best-locations-grid{
@@ -280,7 +305,11 @@ i{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     gap: 35px;
-    margin: 2% 0%; 
+    margin: 2% 0%;
+  }
+
+  .activity{
+    border-radius: 20px;
   }
 
   .activity img{
@@ -292,9 +321,8 @@ i{
     
   }
   .activity p{
-    padding: 4%;
-    margin-left: 10px;
     font-weight: bold;
+    margin: 4%;
   }
 
    /*FOOTER*/
@@ -309,7 +337,6 @@ i{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 5px;
   }
 
   .section-title{
@@ -322,7 +349,7 @@ i{
 
    /* MEDIA QUERIES*/
   
-  @media screen and (max-width:768px){
+  @media screen and (max-width:992px){
     .locations-grid{
         grid-template-columns: 1fr;
       }
@@ -338,21 +365,70 @@ i{
         }
   }
 
-  @media screen and (max-width:678px){
+  @media screen and (max-width:760px){
+    html, body{
+      margin: 0%;
+      padding: 0%;
+    }
+
+    .search-and-filter, .all-activities, footer{
+      padding:4%
+    }
+    
     .top-header{
-        flex-direction: column;
+        display: initial;
+        margin-top: 4%;
+    }
+    #logo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .top-header img{
-        margin: 10px 0px
+        margin: 20px 0px; 
     }
     .top-header ul{
         width: 100%;
+  
+        justify-content: stretch;
+    }
+    #hebergements-li{
+      padding: 4% 6%;
+    }
+
+    #activites-li{
+      padding: 4% 10%;
+    }
+
+    #activites-li, #hebergements-li{
+      border-bottom: 2px solid #f2f2f2;
+      flex-grow: 1;
+      text-align: center; 
     }
     .top-header ul li{
         margin: 0px;
+        padding: 0%;
     }
+    #hebergements-li:hover{
+      border-bottom:2px solid #0065fc;
+    }
+    #activites-li:hover{
+      border-bottom:2px solid #0065fc;
+    }
+    #hebergements-li:hover li{
+      border-top: 2px solid white;
+      color: #0065fc;
+    }
+    #activites-li:hover li{
+      border-top: 2px solid white;
+      color: #0065fc;
+    }
+
     .search-bar i, .search-bar button{
       padding: 15px;
+    }
+    .search-bar input{
+      width: 245px;
     }
     .search-bar button p {
       display: none;
@@ -379,9 +455,19 @@ i{
       .tags{
         justify-content: center;
       }
+      .info p {
+        font-size: small;
+      }
       .locations-grid{
         display: flex;
         flex-direction: column-reverse;
+        background-color: #f2f2f2;
+      }
+      .all-locations{
+        background-color: white;
+      }
+      .all-locations, .best-locations{
+        border-radius: initial;
       }
 
     .all-locations-grid, .best-locations-grid{
@@ -395,9 +481,13 @@ i{
     .all-locations-card img{
       aspect-ratio: 16/6;
     }
+    .all-locations-card .card-text, .all-locations-card .ratings{
+      padding: 0% 4%;
+    }
     .best-locations-card{
       padding: 1%;
     }
+
     .activities{
         display: flex;
         flex-direction: column;
@@ -409,5 +499,11 @@ i{
     footer{
         flex-direction: column;
 
+    }
+  }
+
+  @media screen and (max-width:320px) {
+    .search-bar input{
+      width: 190px;
     }
   }
