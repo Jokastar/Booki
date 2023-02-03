@@ -98,32 +98,35 @@ i{
   border-top: 2px solid #0065fc;
 }
  /*SECTION SEARCH AND FILTERS*/
-.search-bar i, .search-bar input, .search-bar button{
-  border: none;
-}
-
 .search-bar{
     display: flex;
     align-items: center;
     margin: 30px 0px;
-
+}
+.fa-location-dot, .search-bar input, .search-bar button{
+  padding: 15px;
 }
 
-.search-bar i{
+.fa-location-dot{
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    padding: 15px;
-}
-.search-bar input{
-  padding: 4px; 
-  border-left: none;
-  height: 40px;
-  width: 250px;
+    border: 2px solid #d9d9d9;
+   
 }
 
-.search-bar input:active{
-  border:none; 
+.search-bar input{
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid#d9d9d9;
+  border-bottom: 1px solid#d9d9d9;
+  outline: none;
 }
+
+input::placeholder {
+  color: black;
+}
+
+
 .search-bar button{
     padding:15px;
     border-top-right-radius: 15px;
@@ -131,10 +134,9 @@ i{
     position: relative;
     right: 5px;
     border-left: none;
+    border: 1px solid #0065fc;
 }
-.search-bar button p{
-  margin: 0px;
-}
+
 .search-bar button i {
   padding: 0px;
   display: none; 
@@ -197,15 +199,6 @@ i{
 
  /*SECTION LOCATIONS GRID*/
 
-.locations-grid{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 15px;
-  }
-  
-  .locations-grid p{
-    margin: 2px;
-  }
   .all-locations, .best-locations, .all-locations-card, .best-locations-card, .activity{
     border-radius: 15px;
   }
@@ -213,41 +206,51 @@ i{
   .all-locations-card, .best-locations-card, .activity{
     box-shadow: 6px 6px 25px rgba(100, 100, 100, 0.2); 
   }
-  
-  .all-locations, .best-locations{
-    padding: 10px 25px;
+  .all-locations-card, .best-locations-card{
+    padding:5px;
+  }
+  .all-locations{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
   }
   
-  .all-locations-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+  .all-locations, .best-locations{
+    padding: 2%;
+  }
+  .locations-grid{
+    display: flex;
     gap: 15px;
-    justify-content: center;
-    align-items: flex-start;
+  }
+  .all-locations-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
   }
   
   .all-locations-card{
-    padding: 2%;
-    background-color: white;
+    width: 30%;
+    flex-grow: 1;
+    padding-bottom: 0px;
   }
-  
-  .all-locations-card .card-img{
+  .all-locations-grid .img-card{
     width: 100%;
   }
   .all-locations-card img{
-    width: 100%;
     object-fit: cover;
+    width: 100%;
     aspect-ratio: 16/9;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius:12px;
+    border-top-right-radius:12px;
   }
-
-  .all-locations-card .card-text, .all-locations-card .ratings{
-    padding: 1% 4%;
-  }
-
   
+  .best-locations{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
   .best-locations-header{
     display: flex;
     justify-content: space-between;
@@ -255,49 +258,49 @@ i{
   }
   
   .best-locations-grid{
-    height: 80%;
     display: flex;
-    flex-direction:column;
-    align-items: stretch;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column;
+    gap: 30px;
   }
-  
   
   .best-locations-card{
-    height:120px;
     display: flex;
-    padding: 1%;
-    gap: 15px;
-    background-color: white;
-  }
-  .best-locations-card .card-img{
-    width: 100px;
+    flex-grow: 1;
+    flex-shrink: 1;
   }
   
+  .best-locations-grid .img-card{
+    width: 35%;
+  }
   .best-locations-card img{
     width: 100%;
-    height:100%;
+    height: 100%;
+    aspect-ratio: 2/2;
     object-fit: cover;
-    border-top-left-radius: 10px ;
-    border-bottom-left-radius: 10px;
+    border-bottom-left-radius:12px;
+    border-top-left-radius:12px;
   }
   .best-locations-car-body{
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  
-  .tarif{
-    font-size: small;
-    margin: 2px 1px;
+  .card-text, .ratings{
+    padding-left: 10px;
+  }
+  .card-text p{
+    margin: 5px 0px;
   }
   .hotel-name{
     font-size: 14px;
     font-weight: bold;
   }
 
+  .tarif{
+    font-size: 12px;
+  }
+  
+  
 
  /* SECTION ACTIVITES*/
 
@@ -322,7 +325,9 @@ i{
   }
   .activity p{
     font-weight: bold;
-    margin: 4%;
+    font-size: 14px;
+    margin: 2%;
+    padding: 2% 4%;
   }
 
    /*FOOTER*/
@@ -349,20 +354,17 @@ i{
 
    /* MEDIA QUERIES*/
   
-  @media screen and (max-width:992px){
+  @media screen and (max-width:1023px){
     .locations-grid{
-        grid-template-columns: 1fr;
-      }
-        .best-locations-grid{
-          display: flex;
-          flex-direction: row;
-        }
-        .best-locations-card{
-          padding: 0.5%;
-        }
-        .all-locations-card{
-          padding: 1.5%;
-        }
+      flex-direction: column;
+    }
+    .all-locations, .best-locations{
+      width: initial;
+    }
+    .best-locations-grid{
+      flex-direction: row;
+    }
+    
   }
 
   @media screen and (max-width:760px){
@@ -371,7 +373,7 @@ i{
       padding: 0%;
     }
 
-    .search-and-filter, .all-activities, footer{
+    .search-and-filter, .all-locations, .best-locations, .all-activities, footer{
       padding:4%
     }
     
@@ -410,27 +412,59 @@ i{
         padding: 0%;
     }
     #hebergements-li:hover{
+      border-top: 2px solid white;
       border-bottom:2px solid #0065fc;
     }
     #activites-li:hover{
+      border-top: 2px solid white;
       border-bottom:2px solid #0065fc;
     }
-    #hebergements-li:hover li{
-      border-top: 2px solid white;
+    #hebergements-li:hover a{
       color: #0065fc;
     }
-    #activites-li:hover li{
-      border-top: 2px solid white;
+    #activites-li:hover a{
       color: #0065fc;
     }
 
-    .search-bar i, .search-bar button{
-      padding: 15px;
+    .search-bar{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      height: 40px;
+    }
+    .search-bar{
+      height: 45px;
+    }
+
+    .fa-location-dot, .search-bar input, .search-bar button{
+      padding: 20px;
+    }
+    
+    .fa-location-dot{
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+    .search-bar form {
+      display: flex;
+      flex-grow: 1; 
+      height: 100%;
     }
     .search-bar input{
-      width: 245px;
+      
+      flex-grow: 1;
+      border-left: none;
+      border-right: none;
     }
-    .search-bar button p {
+    .search-bar button{
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+    
+    .search-bar button, .fa-location-dot{
+      padding: 13px;
+    }
+    button span{
       display: none;
     }
     .search-bar button i{
@@ -441,9 +475,7 @@ i{
         flex-direction: column;
         align-items: initial;
       }
-      .search-bar{
-        justify-content: center;
-      }
+      
       .filters{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -459,35 +491,28 @@ i{
         font-size: small;
       }
       .locations-grid{
-        display: flex;
         flex-direction: column-reverse;
-        background-color: #f2f2f2;
+      }
+      .all-locations, .best-locations{
+        border-radius: initial; 
       }
       .all-locations{
         background-color: white;
       }
-      .all-locations, .best-locations{
-        border-radius: initial;
-      }
-
-    .all-locations-grid, .best-locations-grid{
-      display: flex;
+      .all-locations-grid{
       flex-direction: column;
-      align-items: initial;
+  
     }
-      .all-locations-card{
-      padding: 1%;
-    }
-    .all-locations-card img{
-      aspect-ratio: 16/6;
-    }
-    .all-locations-card .card-text, .all-locations-card .ratings{
-      padding: 0% 4%;
-    }
-    .best-locations-card{
-      padding: 1%;
-    }
-
+      .all-locations-card, .best-locations-card{
+        width:initial;
+      }
+      .all-locations-card img{
+        aspect-ratio: 16/6;
+      }
+      .best-locations-grid{
+        flex-direction:column ;
+      }
+      
     .activities{
         display: flex;
         flex-direction: column;
@@ -499,11 +524,5 @@ i{
     footer{
         flex-direction: column;
 
-    }
-  }
-
-  @media screen and (max-width:320px) {
-    .search-bar input{
-      width: 190px;
     }
   }
