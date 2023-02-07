@@ -264,13 +264,14 @@ input::placeholder {
   }
   
   .best-locations-card{
+    aspect-ratio: 5/2;
     display: flex;
     flex-grow: 1;
     flex-shrink: 1;
   }
   
   .best-locations-grid .img-card{
-    width: 35%;
+    width: 35%; 
   }
   .best-locations-card img{
     width: 100%;
@@ -280,10 +281,12 @@ input::placeholder {
     border-bottom-left-radius:12px;
     border-top-left-radius:12px;
   }
+  
   .best-locations-car-body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 60%;
   }
   .card-text, .ratings{
     padding-left: 10px;
@@ -303,7 +306,6 @@ input::placeholder {
   
 
  /* SECTION ACTIVITES*/
-
   .activities{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
@@ -354,7 +356,7 @@ input::placeholder {
 
    /* MEDIA QUERIES*/
   
-  @media screen and (max-width:1023px){
+  @media screen and (max-width:992px){
     .locations-grid{
       flex-direction: column;
     }
@@ -364,10 +366,16 @@ input::placeholder {
     .best-locations-grid{
       flex-direction: row;
     }
+    .best-locations-card{
+      aspect-ratio: 3/1.5;
+    }
+    .hotel-name{
+      font-size: 12px;
+    }
     
   }
 
-  @media screen and (max-width:760px){
+  @media screen and (max-width:767px){
     html, body{
       margin: 0%;
       padding: 0%;
@@ -512,6 +520,11 @@ input::placeholder {
       .best-locations-grid{
         flex-direction:column ;
       }
+      
+      .hotel-name{
+        font-size: 14px;
+      }
+     
       
     .activities{
         display: flex;
