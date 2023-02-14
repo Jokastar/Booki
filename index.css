@@ -10,6 +10,7 @@ html{
 
 body{
   margin-top: 0px;
+  max-width: 1400px;
 }
 
 a{
@@ -53,10 +54,6 @@ i{
 .bold{
     font-weight: bold;
 }
-.smaller{
-    font-weight: smaller;
-}
-
 
  /*HEADER*/
 
@@ -67,7 +64,7 @@ i{
 }
 
 .top-header img{
-    width: 80px;
+    width: 70px;
     object-fit: contain;
 }
 
@@ -102,6 +99,7 @@ i{
     align-items: center;
     margin: 30px 0px;
 }
+
 .fa-location-dot, .search-bar input, .search-bar button{
   padding: 15px;
 }
@@ -109,8 +107,8 @@ i{
 .fa-location-dot{
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    border: 2px solid #d9d9d9;
-   
+    border: 1px solid #d9d9d9;
+    padding-top: 15px;
 }
 
 .search-bar input{
@@ -122,12 +120,11 @@ i{
 }
 
 input::placeholder {
-  color: black;
+  color: #d9d9d9; 
 }
 
 
 .search-bar button{
-    padding:15px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     position: relative;
@@ -149,23 +146,21 @@ input::placeholder {
     display: flex;
     align-items: center;
 }
-.filter-section h3{
-  margin-right: 2%;
-}
+
 .filters{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content:space-evenly;
+  width: 70%;
 }
 .tags{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    margin-right: 4%;
+    margin-right: 2%;
     border: 2px solid #d9d9d9;
     border-radius: 40px;
-    padding:12px;
+    padding:10px 15px;
 }
 .tags-icon{
     margin-right: 10px;
@@ -174,7 +169,7 @@ input::placeholder {
 .tags p{
     font-weight: 600;
     margin: 0px;
-    font-size: small;
+    font-size: 0.9em;
 }
 
 .tags:hover{
@@ -219,7 +214,7 @@ input::placeholder {
   }
   .locations-grid{
     display: flex;
-    gap: 15px;
+    gap: 30px;
   }
   .all-locations-grid{
     display: flex;
@@ -293,12 +288,13 @@ input::placeholder {
     margin: 5px 0px;
   }
   .hotel-name{
-    font-size: 14px;
+    font-size: 0.80em; 
     font-weight: bold;
+    width: 20ch;
   }
 
   .tarif{
-    font-size: 12px;
+    font-size: 0.7em; 
   }
   
   
@@ -323,18 +319,21 @@ input::placeholder {
     border-top-right-radius: 15px;
     
   }
+ 
   .activity p{
     font-weight: bold;
-    font-size: 14px;
-    margin: 2%;
-    padding: 2% 4%;
+    font-size: 0.75em; 
+    margin-left: 4%;
+    padding: 2%;
   }
 
    /*FOOTER*/
 
   footer{
+    
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 20%;
     padding: 4%;
   }
 
@@ -342,19 +341,73 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 10px;
   }
 
   .section-title{
     font-weight: bold;
-
+  
   }
-  .footer-section p{
-    font-size:smaller;
+  .footer-section a{
+    font-size: 0.75em;
   }
 
    /* MEDIA QUERIES*/
+   @media screen and (min-width:1400px) {
+    body{
+      font-size: 1.1em;
+    }
+
+   .search-bar i {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-top: 23px;
+   }
+
+   .search-bar form{
+    width: 40%;
+   }
+    .search-bar input{
+      width: 40%;
+      font-size: 1em;
+    }
+
+    .search-bar button{
+      width: 30%;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    button span {
+      font-size: 1.4em;
+    }
+
+    .fa-location-dot, .search-bar input, .search-bar button{
+      padding: 20px;
+    }
+
+    .tags{
+      padding: 15px 20px;
+    }
+
+    .card-text, footer{
+      font-size: 1.2em;
+    }
+
+    .activity p{
+      font-size: 1em;
+    }
+
+    .tags p{
+      font-size: 1.1em;
+    }
+   }
   
   @media screen and (max-width:992px){
+    .filters{
+      width: 100%;
+    }
+    
     .locations-grid{
       flex-direction: column;
     }
@@ -367,10 +420,7 @@ input::placeholder {
     .best-locations-card{
       aspect-ratio: 3/1.5;
     }
-    .hotel-name{
-      font-size: 12px;
-    }
-    
+
   }
 
   @media screen and (max-width:767px){
@@ -437,19 +487,19 @@ input::placeholder {
       align-items: center;
       justify-content: center;
       flex-grow: 1;
-      height: 40px;
-    }
-    .search-bar{
       height: 45px;
     }
-
+    
+    .search-bar i{
+      padding-top: 15px;
+    }
     .fa-location-dot, .search-bar input, .search-bar button{
       padding: 20px;
     }
     
     .fa-location-dot{
-      border-top-left-radius: 12px;
-      border-bottom-left-radius: 12px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
     }
     .search-bar form {
       display: flex;
@@ -463,12 +513,13 @@ input::placeholder {
       border-right: none;
     }
     .search-bar button{
-      border-top-right-radius: 12px;
-      border-bottom-right-radius: 12px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
     }
     
     .search-bar button, .fa-location-dot{
       padding: 13px;
+      padding-top: 12px;  
     }
     button span{
       display: none;
@@ -489,10 +540,14 @@ input::placeholder {
         gap: 15px;
         justify-content: center;
         align-items: center;
+        width: initial; 
       }
       .tags{
         justify-content: center;
+        padding: 10px 0px;
       }
+      
+      
       .info p {
         font-size: small;
       }
@@ -518,12 +573,13 @@ input::placeholder {
       .best-locations-grid{
         flex-direction:column ;
       }
-      
-      .hotel-name{
-        font-size: 14px;
+      .hotel-name, .activity p {
+        font-size: 0.9em;
       }
-     
-      
+    .footer-section{
+      gap: 10px;
+      margin-bottom: 30px;
+    }  
     .activities{
         display: flex;
         flex-direction: column;
@@ -535,5 +591,8 @@ input::placeholder {
     footer{
         flex-direction: column;
 
+    }
+    .footer-section a {
+      font-size: 0.85em;
     }
   }
