@@ -414,7 +414,7 @@ input::placeholder {
     .all-locations, .best-locations{
       width: initial;
 
-      
+
     }
     .best-locations-grid{
       flex-direction: row;
@@ -547,6 +547,9 @@ input::placeholder {
       .tags{
         justify-content: center;
         padding: 10px 0px;
+      }
+      .tags p {
+        font-size: 0.7em;
       }
       
       
