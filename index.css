@@ -413,6 +413,8 @@ input::placeholder {
     }
     .all-locations, .best-locations{
       width: initial;
+
+      
     }
     .best-locations-grid{
       flex-direction: row;
